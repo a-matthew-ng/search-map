@@ -16,13 +16,33 @@
         />
       </div>
 
-      <p><strong>Capital:</strong> {{ countryData.capital[0] }}</p>
-      <p><strong>Region:</strong> {{ countryData.region }}</p>
-      <p><strong>Subregion:</strong> {{ countryData.subregion }}</p>
-      <p><strong>Continent:</strong> {{ countryData.continents[0] }}</p>
-      <p><strong>Area:</strong> {{ countryData.area }} km²</p>
-      <p><strong>Borders:</strong> {{ countryData.borders.join(", ") }}</p>
-      <p><strong>Time Zone:</strong> {{ countryData.timezones[0] }}</p>
+      <p>
+        <strong>Capital:</strong>
+         {{ countryData.capital[0] }}
+        </p>
+      <p>
+        <strong>Region:</strong>
+         {{ countryData.region }}
+      </p>
+      <p>
+        <strong>Subregion:</strong>
+         {{ countryData.subregion }}
+      </p>
+      <p>
+        <strong>Continent:</strong>
+         {{ countryData.continents[0] }}
+      </p>
+      <p>
+        <strong>Area:</strong>
+         {{ countryData.area }} km²
+      </p>
+      <p>
+        <strong>Borders:</strong> 
+        {{ countryData.borders.join(", ") }}</p>
+      <p>
+        <strong>Time Zone:</strong>
+         {{ countryData.timezones[0] }}
+      </p>
 
       <div class="map-buttons">
         <button @click="mapType = 'googleMaps'">Google Maps</button>
@@ -82,7 +102,7 @@
 import { defineComponent, ref } from "vue";
 
 export default defineComponent({
-  name: "CountryDetails",
+  name: "CountryResults",
   props: {
     countryData: {
       type: Object,
